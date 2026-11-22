@@ -1,84 +1,51 @@
-# Next.js, React & TailwindCSS Portfolio Project
+# Gilson Cruz — Software Engineer | AI & Automation | CR Tech Group
 
-A simple portfolio starter theme built with Next.js, React and Tailwind CSS. This is the Next.js version of [vuejs-tailwindcss-portfolio](https://github.com/realstoman/vuejs-tailwindcss-portfolio).
+Portafolio profesional y escaparate de arquitectura de software desarrollado con **Next.js** y **Tailwind CSS**. Diseñado para presentar soluciones en producción enfocadas en Inteligencia Artificial Generativa, Machine Learning, Ingeniería de Datos y Automatización de Procesos Operativos.
 
-![React-TailwindCSS-Portfolio](https://user-images.githubusercontent.com/16396664/146666086-28e88beb-c2f0-431f-adfb-2396d8f64c80.png)
+## Perfil Técnico
+* **Rol:** Software Engineer | AI & Automation Integrator | Founder at **CR Tech Group**
+* **Ubicación:** Guayaquil, Ecuador
+* **Enfoque:** Integración de agentes de IA empresariales, pipelines de analítica de datos a escala y desarrollo backend contenerizado.
+* **Stack Principal:** Python (FastAPI, Pandas, Scikit-Learn, XGBoost), Node.js, React / Next.js, PostgreSQL, Power BI (DAX), Google Apps Script y Docker.
 
-## Demo URL
+---
 
-[https://nextjs-tailwindcss-portfolio.vercel.app](https://nextjs-tailwindcss-portfolio.vercel.app)
+## Proyectos Destacados
 
-## Other versions of this project
+1. **Enterprise AI Agents (Gemini & Tool Calling)**
+   * Implementación de agentes de Gemini Enterprise en operaciones retail de gran escala.
+   * Diseño de prompts estructurados y scripts modulares (*Tool Calling*) para validación de reglas de negocio, auditoría transaccional y extracción automatizada de métricas.
 
--   React Version: [https://github.com/realstoman/react-tailwindcss-portfolio](https://github.com/realstoman/react-tailwindcss-portfolio)
--   Vue.js Version: [https://github.com/realstoman/vuejs-tailwindcss-portfolio](https://github.com/realstoman/vuejs-tailwindcss-portfolio)
--   Nuxt.js Version: [https://github.com/realstoman/nuxtjs-tailwindcss-portfolio](https://github.com/realstoman/nuxtjs-tailwindcss-portfolio)
+2. **Cardiovascular Risk Prediction Engine — Plataforma NexuML**
+   * Motor de predicción clínica entrenado sobre una población inicial de 331,464 registros (CDC BRFSS y Framingham NHLBI).
+   * Preprocesamiento con imputación múltiple (**MICE**) y filtrado longitudinal basal (324,229 vectores) para modelos de Regresión Logística y Random Forest.
+   * Arquitectura contenerizada con **Docker** separando la API de inferencia (**FastAPI**) del frontend (**Next.js**), con validación clínica *Human-in-the-Loop (HITL)*.
 
-## Features
+3. **Retail Audit & BI Pipeline (+200 Stores)**
+   * Ecosistema automatizado con **Google Apps Script**, **Python** y **Power BI (DAX)** para unificar arqueos, auditorías y detección de anomalías operativas a nivel nacional.
 
--   Built with [Next.js](https://nextjs.org) and [React](https://reactjs.org)
--   [Tailwind CSS v3](https://tailwindcss.com)
--   Custom Hooks
--   Framer Motion Transitions & Animations
--   Reusable Components
--   Projects filter by category
--   Projects filter by search
--   Dark Mode
--   Smooth scroll
--   Counter
--   Dynamic forms
--   Back to top button
--   Download file button
--   Simple and responsive design
+4. **Institutional Web & Data Platform (Fundación Aneupi)**
+   * Desarrollo fullstack mobile-first utilizando **React.js**, **Tailwind CSS**, **Node.js**, **Sequelize ORM** y **PostgreSQL**.
 
-### To Contribute to this project, read the [Contribution Guidlines](https://github.com/realstoman/nextjs-tailwindcss-portfolio/blob/main/CONTRIBUTING.md)
+---
 
-## Setup
+## Ejecución Local
 
-1. Make sure you have Node JS installed. If you don't have it:
+```bash
+# Clonar el repositorio
+git clone [https://github.com/DevEfrenCruz/gilson-portfolio.git](https://github.com/DevEfrenCruz/gilson-portfolio.git)
 
--   [Download it from nodejs.org](https://nodejs.org)
--   [Install it using NVM ](https://github.com/nvm-sh/nvm)
--   If you're on Mac, Homebrew is a good option too:
-
-```
-brew install node
-```
-
-2. Clone the repo:
-
-```
-git clone https://github.com/realstoman/nextjs-tailwindcss-portfolio.git
-```
-
-3. Open the project folder:
-
-```
-cd nextjs-tailwindcss-portfolio
-```
-
-4. Install packages and dependencies:
-
-```
+# Instalar dependencias
 npm install
-```
 
-5. Start a local dev server at `http://localhost:3000`:
-
-```
+# Levantar entorno de desarrollo
 npm run dev
-```
 
-## Notes
+Abre http://localhost:3000 en tu navegador para visualizar el proyecto.
 
--   Always run `npm install` after pulling new changes
--   I'll be constantly updating this repo as I'll be adding more sections to it, so please always check the projects section of this repo to see what tasks are under todo and in progress
--   Coming Soon [I'll be doing a screencast](https://www.youtube.com/realstoman). Soon I'll be uploading a video to my YouTube channel where I'll be going through the process of creating this portoflio
--   Illustrations from [unDraw](https://undraw.co) and [Freepik](https://freepik.com)
--   Images from [Unsplash](https://unsplash.com)
--   Feel free to use it as your own portfolio
--   Contributions are welcome
+Contacto y Enlaces
+GitHub: github.com/DevEfrenCruz
 
-### License
+Marca: CR Tech Group
 
-[MIT](https://github.com/realstoman/nextjs-tailwindcss-portfolio/blob/main/LICENSE)
+Base UI template adapted from nextjs-tailwindcss-portfolio under the MIT License.
