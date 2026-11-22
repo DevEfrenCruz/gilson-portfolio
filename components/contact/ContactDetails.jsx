@@ -1,20 +1,20 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+import { FiMapPin, FiMail, FiBriefcase } from 'react-icons/fi';
 
 const contacts = [
 	{
 		id: 1,
-		name: 'Your Address, Your City, Your Country',
+		name: 'Guayaquil, Guayas, Ecuador (Remote / Hybrid)',
 		icon: <FiMapPin />,
 	},
 	{
 		id: 2,
-		name: 'email@domain.com',
+		name: 'gilsonecruz92@gmail.com',
 		icon: <FiMail />,
 	},
 	{
 		id: 3,
-		name: '555 8888 888',
-		icon: <FiPhone />,
+		name: 'CR Tech Group — AI, Data & Software Engineering',
+		icon: <FiBriefcase />,
 	},
 ];
 

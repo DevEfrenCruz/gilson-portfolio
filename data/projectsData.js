@@ -169,7 +169,7 @@ export const projectsData = [
 		title: 'Retail Audit & BI Pipeline (+200 Stores)',
 		url: 'retail-audit-bi-pipeline',	
 		category: 'Data Engineering & Automation',
-		img: '/images/ui-project-1.jpg',
+		img: '/images/dashboard-rendimiento-procesos-demo.jpg',
 		ProjectHeader: {
 			title: 'Retail Audit & BI Pipeline (+200 Stores)',
 			publishDate: 'May 2026',
@@ -179,12 +179,12 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Dashboard Ejecutivo Power BI',
-				img: '/images/ui-project-1.jpg',
+				img: '/images/dashboard-rendimiento-procesos-demo.jpg',
 			},
 			{
 				id: uuidv4(),
 				title: 'Servicio de Persistencia Automatizada',
-				img: '/images/mobile-project-1.jpg',
+				img: '/images/arquitectura-forms-appsscript-powerbi.jpg',
 			},
 		],
 		ProjectInfo: {
@@ -250,7 +250,7 @@ export const projectsData = [
 		title: 'Institutional Web & Data Platform',
 		url: 'institutional-web-platform',
 		category: 'Fullstack Web Development',
-		img: '/images/web-project-1.jpg',
+		img: '/images/aneuipi-platform.png',
 		ProjectHeader: {
 			title: 'Institutional Web & Data Platform',
 			publishDate: 'Abr 2025',
@@ -260,12 +260,12 @@ export const projectsData = [
 			{
 				id: uuidv4(),
 				title: 'Interfaz Mobile-First',
-				img: '/images/web-project-1.jpg',
+				img: '/images/aneupi-platform 2.png',
 			},
 			{
 				id: uuidv4(),
 				title: 'Arquitectura Relacional',
-				img: '/images/ui-project-2.jpg',
+				img: '/images/bd-aneupi.png',
 			},
 		],
 		ProjectInfo: {
