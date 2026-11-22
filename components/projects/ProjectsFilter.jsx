@@ -1,8 +1,8 @@
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'Artificial Intelligence',
+	'Machine Learning / Backend',
+	'Data Engineering & Automation',
+	'Fullstack Web Development',
 ];
 
 function ProjectsFilter({ setSelectProject }) {
@@ -27,12 +27,12 @@ function ProjectsFilter({ setSelectProject }) {
                 dark:text-ternary-light
             "
 		>
-			<option value={setSelectProject} className="text-sm sm:text-md">
+			<option value="" className="text-sm sm:text-md">
 				All Projects
 			</option>
 
 			{selectOptions.map((option) => (
-				<option className="text-normal sm:text-md" key={option}>
+				<option className="text-normal sm:text-md" key={option} value={option}>
 					{option}
 				</option>
 			))}

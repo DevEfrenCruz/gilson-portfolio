@@ -3,8 +3,11 @@ import { FiClock, FiTag } from 'react-icons/fi';
 import PagesMetaHead from '../../components/PagesMetaHead';
 import { projectsData } from '../../data/projectsData';
 import RelatedProjects from '../../components/projects/RelatedProjects';
+import { useState } from 'react';
 
 function ProjectSingle(props) {
+	const [selectedImg, setSelectedImg] = useState(null);
+
 	return (
 		<div className="container mx-auto">
 			<PagesMetaHead title={props.project.title} />
@@ -34,12 +37,15 @@ function ProjectSingle(props) {
 			<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
 				{props.project.ProjectImages.map((project) => {
 					return (
-						<div className="mb-10 sm:mb-0" key={project.id}>
+						<div
+							className="mb-10 sm:mb-0 cursor-zoom-in"
+							key={project.id}
+							onClick={() => setSelectedImg(project.img)}
+						>
 							<Image
 								src={project.img}
-								className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+								className="rounded-xl shadow-lg sm:shadow-none hover:opacity-90 transition duration-300"
 								alt={project.title}
-								key={project.id}
 								layout="responsive"
 								width={100}
 								height={90}
@@ -60,24 +66,25 @@ function ProjectSingle(props) {
 						<ul className="leading-loose">
 							{props.project.ProjectInfo.CompanyInfo.map(
 								(info) => {
+									const isLink = info.details.startsWith('http');
 									return (
 										<li
 											className="font-general-regular text-ternary-dark dark:text-ternary-light"
 											key={info.id}
 										>
 											<span>{info.title}: </span>
-											<a
-												href="https://stoman.me"
-												className={
-													info.title === 'Website' ||
-													info.title === 'Phone'
-														? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-														: ''
-												}
-												aria-label="Project Website and Phone"
-											>
-												{info.details}
-											</a>
+											{isLink ? (
+												<a
+													href={info.details}
+													target="_blank"
+													rel="noopener noreferrer"
+													className="hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
+												>
+													{info.details}
+												</a>
+											) : (
+												<span>{info.details}</span>
+											)}
 										</li>
 									);
 								}
@@ -106,34 +113,9 @@ function ProjectSingle(props) {
 							)}
 						</p>
 					</div>
-
-					{/* Single project social sharing */}
-					<div>
-						<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-							{props.project.ProjectInfo.SocialSharingHeading}
-						</p>
-						{/* <div className="flex items-center gap-3 mt-5">
-							{props.project.ProjectInfo.SocialSharing.map(
-								(social, index) => {
-									<Link
-										key={index}
-										href={social.url}
-										target="__blank"
-										passHref={true}
-										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											{social.icon}
-										</span>
-									</Link>;
-								}
-							)}
-						</div> */}
-					</div>
 				</div>
 
-				{/*  Single project right section details */}
+				{/* Single project right section details */}
 				<div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
 					<p className="text-primary-dark dark:text-primary-light text-2xl font-bold mb-7">
 						{props.project.ProjectInfo.ProjectDetailsHeading}
@@ -150,6 +132,25 @@ function ProjectSingle(props) {
 					})}
 				</div>
 			</div>
+
+			{/* Lightbox Modal para ampliar diagramas */}
+			{selectedImg && (
+				<div
+					onClick={() => setSelectedImg(null)}
+					className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-85 p-4 cursor-zoom-out"
+				>
+					<div className="relative max-w-5xl w-full flex flex-col items-center">
+						<img
+							src={selectedImg}
+							alt="Vista ampliada"
+							className="max-h-[85vh] w-auto rounded-lg shadow-2xl object-contain"
+						/>
+						<span className="text-white text-sm mt-3 bg-gray-900 bg-opacity-75 px-4 py-1.5 rounded-full">
+							Haz clic en cualquier lugar para cerrar
+						</span>
+					</div>
+				</div>
+			)}
 
 			<RelatedProjects />
 		</div>

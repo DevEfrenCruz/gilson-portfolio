@@ -8,15 +8,15 @@ function AppFooterCopyright() {
 					target="__blank"
 					className="hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
 				>
-					Next.js & Tailwind CSS Portfolio
+					Engineered by CR Tech Group 
 				</a>
 				.{' '}
 				<a
 					href="https://stoman.me"
 					target="__blank"
 					className="text-secondary-dark dark:text-secondary-light font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
-				>
-					Stoman
+					>
+					— Gilson Cruz
 				</a>
 			</div>
 		</div>
